@@ -1,0 +1,31 @@
+Admin\Bundle\Entity\Matiere:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\MatiereRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomMatiere:
+            type: string
+            length: 255
+            column: nom_matiere
+        typeMatiere:
+            type: string
+            length: 255
+            column: type_matiere
+        coefficient:
+            type: float
+        duree:
+            type: time
+    manyToOne:
+        idEnseignant:
+            targetEntity: Enseignant
+            joinColumn:
+            name: id_Enseigant
+            referencedColumnName: id
+            onDelete : cascade
+    lifecycleCallbacks: {  }

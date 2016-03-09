@@ -1,0 +1,38 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form %}
+    <h1>groupe</h1>
+
+    <table class="table table-striped"data-cache="false" data-height="299">
+       <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nomgroupe</th>
+                <td>{{ entity.nomGroupe }}</td>
+            </tr>
+            <tr>
+                <th>Idniveau</th>
+                <td>{{ entity.idNiveau }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="nav nav-pills">
+    <li>
+        <a href="{{ path('groupe') }}">
+            Back to the list
+        </a>
+    </li>
+    <br>
+    <li>
+        <a href="{{ path('groupe_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <br>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

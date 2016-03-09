@@ -1,0 +1,30 @@
+groupe:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:groupe:index" }
+
+groupe_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:groupe:show" }
+
+groupe_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:groupe:new" }
+
+groupe_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:groupe:create" }
+    methods:  POST
+
+groupe_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:groupe:edit" }
+
+groupe_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:groupe:update" }
+    methods:  [POST, PUT]
+
+groupe_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:groupe:delete" }
+    methods:  [POST, DELETE]

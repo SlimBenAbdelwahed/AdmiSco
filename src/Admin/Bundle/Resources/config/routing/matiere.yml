@@ -1,0 +1,30 @@
+matiere:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:Matiere:index" }
+
+matiere_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:Matiere:show" }
+
+matiere_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:Matiere:new" }
+
+matiere_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:Matiere:create" }
+    methods:  POST
+
+matiere_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:Matiere:edit" }
+
+matiere_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:Matiere:update" }
+    methods:  [POST, PUT]
+
+matiere_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:Matiere:delete" }
+    methods:  [POST, DELETE]

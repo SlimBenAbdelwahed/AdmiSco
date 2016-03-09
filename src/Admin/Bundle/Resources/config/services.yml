@@ -1,0 +1,8 @@
+parameters:
+    admin.authentication.success_handler.class: Admin\Bundle\Authentication\SuccessHandler
+services:
+    my.success_handler:
+        class:      %admin.authentication.success_handler.class%
+        arguments: [@routeur, @security.context]
+        tags:
+             - {name:'monolog.loger',channel:'security'}

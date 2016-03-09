@@ -1,0 +1,10 @@
+annee:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:Annee:index" }
+
+annee_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:Annee:show" }
+
+
+

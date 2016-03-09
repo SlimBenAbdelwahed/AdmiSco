@@ -1,0 +1,56 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form -%}
+    <h1>Note</h1>
+
+    <table class="table table-striped"data-cache="false" data-height="299">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.idMatiere }}</td>
+            </tr>
+            <tr>
+                <th>Noteds1</th>
+                <td>{{ entity.noteDS1 }}</td>
+            </tr>
+            <tr>
+                <th>Noteds2</th>
+                <td>{{ entity.noteDS2 }}</td>
+            </tr>
+            <tr>
+                <th>Notetd</th>
+                <td>{{ entity.noteTD }}</td>
+            </tr>
+            <tr>
+                <th>Notetp</th>
+                <td>{{ entity.noteTP }}</td>
+            </tr>
+            <tr>
+                <th>Noteex</th>
+                <td>{{ entity.noteEX }}</td>
+            </tr>
+            <tr>
+                <th>Qrcodeetudiant</th>
+                <td>{{ entity.qrcodeEtudiant }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('note') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('note_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

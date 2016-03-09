@@ -1,0 +1,32 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form -%}
+    <h1>Semestre</h1>
+
+    <table class="table table-striped"data-cache="false" data-height="299">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Numsemestre</th>
+                <td>{{ entity.numSemestre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('semestre') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('semestre_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

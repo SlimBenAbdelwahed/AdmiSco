@@ -1,0 +1,14 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form %}
+    <h1>diplome creation</h1>
+
+    {{ form(form) }}
+<ul class="nav nav-pills">
+    <li>
+        <a href="{{ path('diplome') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

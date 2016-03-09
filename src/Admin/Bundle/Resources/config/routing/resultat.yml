@@ -1,0 +1,30 @@
+resultat:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:resultat:index" }
+
+resultat_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:resultat:show" }
+
+resultat_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:resultat:new" }
+
+resultat_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:resultat:create" }
+    methods:  POST
+
+resultat_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:resultat:edit" }
+
+resultat_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:resultat:update" }
+    methods:  [POST, PUT]
+
+resultat_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:resultat:delete" }
+    methods:  [POST, DELETE]

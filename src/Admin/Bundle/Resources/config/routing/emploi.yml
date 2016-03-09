@@ -1,0 +1,30 @@
+emploi:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:Emploi:index" }
+
+emploi_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:Emploi:show" }
+
+emploi_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:Emploi:new" }
+
+emploi_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:Emploi:create" }
+    methods:  POST
+
+emploi_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:Emploi:edit" }
+
+emploi_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:Emploi:update" }
+    methods:  [POST, PUT]
+
+emploi_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:Emploi:delete" }
+    methods:  [POST, DELETE]

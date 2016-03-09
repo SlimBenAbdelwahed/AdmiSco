@@ -1,0 +1,8 @@
+Admin\Bundle\Entity\Admin:
+    type:  entity
+    table: Admin
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO

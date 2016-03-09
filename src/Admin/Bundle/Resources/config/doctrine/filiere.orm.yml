@@ -1,0 +1,22 @@
+Admin\Bundle\Entity\filiere:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\filiereRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomFiliere:
+            type: string
+            column: nom_filiere
+    manyToOne:
+        idDiplome:
+            targetEntity: diplome
+            joinColumn:
+            name: id_diplome
+            referencedColumnName: id
+            orphanRemoval: true 
+    lifecycleCallbacks: {  }

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    
+    <parameters>
+        <parameter key="hotel_one_resort.Admin.class AdmiScoBundle">Admin\Bundle\Admin</parameter>
+    </parameters>
+
+    
+    
+    
+    <services>
+    <service id="my.success_handler" class="Admin\Bundle\Authentication\SuccessHandler" public="true">
+            <argument type="service" id="router"></argument>
+            <argument type="service" id="security.context"></argument>
+        </service>
+       </services>
+</container>

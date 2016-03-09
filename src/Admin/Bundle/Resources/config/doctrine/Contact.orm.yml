@@ -1,0 +1,25 @@
+Admin\Bundle\Entity\Contact:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\ContactRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        emailExpediteur:
+            type: string
+            length: 255
+            column: email_expediteur
+        sujet:
+            type: string
+            length: 255
+        actif:
+            type: integer
+        date:
+            type: date
+        message:
+            type: text
+    lifecycleCallbacks: {  }

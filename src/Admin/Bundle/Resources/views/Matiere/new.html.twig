@@ -1,0 +1,15 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form -%}
+    <h1>Matiere creation</h1>
+
+    {{ form(form) }}
+
+        <ul class="table table-striped"data-cache="false" data-height="299">
+    <li>
+        <a href="{{ path('matiere') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

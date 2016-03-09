@@ -1,0 +1,30 @@
+filiere:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:filiere:index" }
+
+filiere_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:filiere:show" }
+
+filiere_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:filiere:new" }
+
+filiere_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:filiere:create" }
+    methods:  POST
+
+filiere_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:filiere:edit" }
+
+filiere_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:filiere:update" }
+    methods:  [POST, PUT]
+
+filiere_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:filiere:delete" }
+    methods:  [POST, DELETE]

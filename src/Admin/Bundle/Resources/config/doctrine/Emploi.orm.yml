@@ -1,0 +1,49 @@
+Admin\Bundle\Entity\Emploi:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\EmploiRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        heureDebut:
+            type:  time
+            column: heure_debut
+        heureFin:
+            type:  time
+            column: heure_fin 
+    manyToOne:
+        matiereId:
+            targetEntity: Matiere
+            joinColumn:
+            name: id_matiere
+            referencedColumnName: id
+            onDelete : cascade
+        jourId:
+            targetEntity: jour
+            joinColumn:
+            name: id_jour
+            referencedColumnName: id
+            onDelete : cascade
+        semestreId:
+            targetEntity: Semestre
+            joinColumn:
+            name: id_semestre
+            referencedColumnName: id
+            onDelete : cascade
+        salleId:
+            targetEntity: Salle
+            joinColumn:
+            name: id_salle
+            referencedColumnName: id
+            onDelete : cascade
+        groupeId:
+            targetEntity: groupe
+            joinColumn:
+            name: id_groupe
+            referencedColumnName: id
+            onDelete : cascade
+    lifecycleCallbacks: {  }

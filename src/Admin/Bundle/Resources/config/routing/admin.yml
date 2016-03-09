@@ -1,0 +1,30 @@
+admin:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:Admin:index" }
+
+admin_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:Admin:show" }
+
+admin_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:Admin:new" }
+
+admin_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:Admin:create" }
+    methods:  POST
+
+admin_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:Admin:edit" }
+
+admin_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:Admin:update" }
+    methods:  [POST, PUT]
+
+admin_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:Admin:delete" }
+    methods:  [POST, DELETE]

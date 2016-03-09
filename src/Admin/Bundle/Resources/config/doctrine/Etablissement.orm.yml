@@ -1,0 +1,38 @@
+Admin\Bundle\Entity\Etablissement:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\EtablissementRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomEtablissement:
+            type: string
+            length: 255
+            column: nom_etablissement
+        adresseEtablissement:
+            type: string
+            length: 255
+            column: adresse_etablissement
+        telEtablissement:
+            type: integer
+            column: tel_etablissement
+        faxEtablissement:
+            type: integer
+            column: fax_etablissement
+        typeEtablissement:
+            type: string
+            length: 255
+            column: type_etablissement
+        mailEtablissement:
+            type: string
+            length: 255
+            column: mail_etablissement
+        siteEtablissement:
+            type: string
+            length: 255
+            column: site_etablissement
+    lifecycleCallbacks: {  }

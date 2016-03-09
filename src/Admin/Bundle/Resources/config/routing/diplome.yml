@@ -1,0 +1,30 @@
+diplome:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:diplome:index" }
+
+diplome_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:diplome:show" }
+
+diplome_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:diplome:new" }
+
+diplome_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:diplome:create" }
+    methods:  POST
+
+diplome_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:diplome:edit" }
+
+diplome_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:diplome:update" }
+    methods:  [POST, PUT]
+
+diplome_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:diplome:delete" }
+    methods:  [POST, DELETE]

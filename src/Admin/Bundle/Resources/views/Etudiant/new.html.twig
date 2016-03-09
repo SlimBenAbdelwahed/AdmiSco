@@ -1,0 +1,17 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form %}
+    <h1>Nouveau Etudiant</h1>
+    
+    
+    {{ form(form) }}
+    
+
+      <ul class="nav nav-pills">
+    <li>
+        <a href="{{ path('etudiant') }}">
+            <h4> Retour a la liste </h4> 
+        </a>
+    </li>
+</ul>
+{% endblock %}

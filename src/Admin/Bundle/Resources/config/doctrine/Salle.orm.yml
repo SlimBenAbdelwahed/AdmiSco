@@ -1,0 +1,16 @@
+Admin\Bundle\Entity\Salle:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\SalleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        numSalle:
+            type: string
+            length: 255
+            column: num_salle
+    lifecycleCallbacks: {  }

@@ -1,0 +1,14 @@
+Admin\Bundle\Entity\jour:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        designation:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

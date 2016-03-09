@@ -1,0 +1,39 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form %}
+    <center>
+    <h1>Filiére</h1>
+
+    <table class="table table-striped" >
+        <tbody>
+            <tr>
+               
+        <th><h4>Id Filiére</h4></th>
+                 <th><h4>Nom Filiere</h4></th>
+                 <th><h4>Id Diplome</h4></th>
+                
+            </tr>
+            <tr>
+               <td><h4>{{ entity.id }}</h4></td>
+                <td><h4>{{ entity.nomFiliere }}</h4></td>
+                <td><h4>{{ entity.idDiplome }}</h4></td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+      
+        <a href="{{ path('filiere') }}">
+            <h4>  Retour à la liste </h4>
+        </a>
+           
+    
+ 
+        <a href="{{ path('filiere_edit', { 'id': entity.id }) }}">
+           <h4> Edit  </h4> 
+        </a>
+    
+  
+    {{ form(delete_form) }}
+</center>
+{% endblock %}

@@ -1,0 +1,60 @@
+Admin\Bundle\Entity\Etudiant:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\EtudiantRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        qrcode:
+            type: string
+            length: 255
+            column: Qrcode
+        cin:
+            type: string
+            length: 255
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+        telephone:
+            type: string
+            length: 255
+        datenaissance:
+            type: date
+        adresse:
+            type: text
+    manyToOne:
+        idFiliere:
+            targetEntity: filiere
+            joinColumn:
+            name: id_filiere
+            referencedColumnName: id
+            onDelete : cascade
+        idNiveau:
+            targetEntity: niveau
+            joinColumn:
+            name: id_niveau
+            referencedColumnName: id
+            onDelete : cascade
+        idDiplome:
+            targetEntity: diplome
+            joinColumn:
+            name: id_diplome
+            referencedColumnName: id 
+            onDelete : cascade
+        idGroupe:
+            targetEntity: groupe
+            joinColumn:
+            name: id_groupe
+            referencedColumnName: id 
+            onDelete : cascade
+    lifecycleCallbacks: {  }

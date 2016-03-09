@@ -1,0 +1,44 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form %}
+    <h1>resultat</h1>
+
+    <table class="table-bordered">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Moyen</th>
+                <td>{{ entity.moyen }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ entity.date|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Mention</th>
+                <td>{{ entity.mention }}</td>
+            </tr>
+            <tr>
+                <th>Remarque</th>
+                <td>{{ entity.remarque }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('resultat') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('resultat_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

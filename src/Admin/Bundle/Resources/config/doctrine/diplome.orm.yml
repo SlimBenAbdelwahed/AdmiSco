@@ -1,0 +1,16 @@
+Admin\Bundle\Entity\diplome:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\diplomeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomDiplome:
+            type: string
+            length: 255
+            column: nom_diplome
+    lifecycleCallbacks: {  }

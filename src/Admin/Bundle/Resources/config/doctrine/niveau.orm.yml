@@ -1,0 +1,21 @@
+Admin\Bundle\Entity\niveau:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\niveauRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        niveau:
+            type: string
+            column: niveau
+    manyToOne:
+        idFiliere:
+            targetEntity: filiere
+            joinColumn:
+            name: id_filiere
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

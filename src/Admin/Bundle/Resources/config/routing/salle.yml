@@ -1,0 +1,30 @@
+salle:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:Salle:index" }
+
+salle_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:Salle:show" }
+
+salle_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:Salle:new" }
+
+salle_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:Salle:create" }
+    methods:  POST
+
+salle_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:Salle:edit" }
+
+salle_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:Salle:update" }
+    methods:  [POST, PUT]
+
+salle_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:Salle:delete" }
+    methods:  [POST, DELETE]

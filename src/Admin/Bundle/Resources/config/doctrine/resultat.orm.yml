@@ -1,0 +1,28 @@
+Admin\Bundle\Entity\resultat:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\resultatRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        moyen:
+            type: float
+        date:
+            type: date
+        mention:
+            type: string
+            length: 255
+        remarque:
+            type: string
+            length: 255
+    manyToOne:
+        qrcodeEtudiant:
+            targetEntity: Etudiant
+            joinColumn:
+            name: id_Etudiant
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

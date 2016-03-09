@@ -1,0 +1,76 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form %}
+    <h1>Etudiant</h1>
+
+    <table class="table table-striped"data-cache="false" data-height="299">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Qrcode</th>
+                <td>{{ entity.qrcode }}</td>
+            </tr>
+            <tr>
+                <th>Cin</th>
+                <td>{{ entity.cin }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entity.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ entity.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ entity.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Datenaissance</th>
+                <td>{{ entity.datenaissance|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ entity.adresse }}</td>
+            </tr>
+            <tr>
+                <th>IdDiplome</th>
+                <td>{{ entity.idDiplome }}</td>
+            </tr>
+            <tr>
+                <th>Idfiliere</th>
+                <td>{{ entity.idFiliere }}</td>
+            </tr>
+            <tr>
+                <th>IdNiveau</th>
+                <td>{{ entity.idNiveau }}</td>
+            </tr>
+            <tr>
+                <th>IdGroupe</th>
+                <td>{{ entity.idGroupe }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="nav nav-pills">
+    <li>
+        <a href="{{ path('etudiant') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('etudiant_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

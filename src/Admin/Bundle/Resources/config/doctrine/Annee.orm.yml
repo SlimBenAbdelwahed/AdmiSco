@@ -1,0 +1,11 @@
+Admin\Bundle\Entity\Annee:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\AnneeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

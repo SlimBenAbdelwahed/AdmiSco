@@ -1,0 +1,38 @@
+Admin\Bundle\Entity\Note:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\NoteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        noteDS1:
+            type: float
+            column: note_DS1
+        noteDS2:
+            type: float
+            column: note_DS2
+        noteTD:
+            type: float
+            column: note_TD
+        noteTP:
+            type: float
+            column: note_TP
+        noteEX:
+            type: float
+            column: note_EX
+    manyToOne:
+        qrcodeEtudiant:
+            targetEntity: Etudiant
+            joinColumn:
+            name: id_Etudiant
+            referencedColumnName: id
+        idMatiere:
+            targetEntity: Matiere
+            joinColumn:
+            name: id_matiere
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

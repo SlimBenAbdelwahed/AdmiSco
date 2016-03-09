@@ -1,0 +1,22 @@
+Admin\Bundle\Entity\groupe:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\groupeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomGroupe:
+            type: string
+            length: 255
+            column: nom_groupe
+    manyToOne:
+        idNiveau:
+            targetEntity: niveau
+            joinColumn:
+            name: id_niveau
+            referencedColumnName: id    
+    lifecycleCallbacks: {  }

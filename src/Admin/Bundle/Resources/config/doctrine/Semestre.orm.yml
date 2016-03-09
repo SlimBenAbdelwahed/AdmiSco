@@ -1,0 +1,16 @@
+Admin\Bundle\Entity\Semestre:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\SemestreRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        numSemestre:
+            type: string
+            length: 255
+            column: num_semestre
+    lifecycleCallbacks: {  }

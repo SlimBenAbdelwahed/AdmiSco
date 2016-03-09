@@ -1,0 +1,30 @@
+niveau:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:niveau:index" }
+
+niveau_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:niveau:show" }
+
+niveau_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:niveau:new" }
+
+niveau_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:niveau:create" }
+    methods:  POST
+
+niveau_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:niveau:edit" }
+
+niveau_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:niveau:update" }
+    methods:  [POST, PUT]
+
+niveau_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:niveau:delete" }
+    methods:  [POST, DELETE]

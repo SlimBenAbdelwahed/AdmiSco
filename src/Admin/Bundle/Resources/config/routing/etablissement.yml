@@ -1,0 +1,30 @@
+etablissement:
+    path:     /
+    defaults: { _controller: "AdmiScoBundle:Etablissement:index" }
+
+etablissement_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:Etablissement:show" }
+
+etablissement_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:Etablissement:new" }
+
+etablissement_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:Etablissement:create" }
+    methods:  POST
+
+etablissement_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:Etablissement:edit" }
+
+etablissement_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:Etablissement:update" }
+    methods:  [POST, PUT]
+
+etablissement_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:Etablissement:delete" }
+    methods:  [POST, DELETE]

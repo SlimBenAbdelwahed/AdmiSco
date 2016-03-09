@@ -1,0 +1,26 @@
+Admin\Bundle\Entity\Enseignant:
+    type: entity
+    table: null
+    repositoryClass: Admin\Bundle\Entity\EnseignantRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        dateDeNaissance:
+            type: date
+            column: 'date_de_naissance'
+        email:
+            type: string
+            length: 255
+        telephone:
+            type: integer
+    lifecycleCallbacks: {  }

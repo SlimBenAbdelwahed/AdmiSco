@@ -1,0 +1,15 @@
+{% block subject %}
+{% autoescape false %}
+
+{% endautoescape %}
+{% endblock %}
+{% block body_text %}
+{% autoescape false %}
+Bonjour,
+{{user.message}}
+vous aver recu ce message de la part de AdmiSco au sujet de  {{user.subject}} 
+
+
+{% endautoescape %}
+{% endblock %}
+{% block body_html %}{% endblock %}

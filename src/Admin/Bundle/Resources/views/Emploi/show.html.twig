@@ -1,0 +1,48 @@
+{% extends 'AdmiScoBundle::standard_layout.html.twig'%}
+
+{% block form -%}
+    <h1>Emploi</h1>
+
+    <table class="table table-striped"data-cache="false" data-height="299">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Matiereid</th>
+                <td>{{ entity.matiereId }}</td>
+            </tr>
+            <tr>
+                <th>Jourid</th>
+                <td>{{ entity.jourId }}</td>
+            </tr>
+            <tr>
+                <th>Semestreid</th>
+                <td>{{ entity.semestreId }}</td>
+            </tr>
+            <tr>
+                <th>Salleid</th>
+                <td>{{ entity.salleId }}</td>
+            </tr>
+            <tr>
+                <th>Groupeid</th>
+                <td>{{ entity.groupeId }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('emploi') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('emploi_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

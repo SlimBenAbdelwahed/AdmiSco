@@ -1,0 +1,115 @@
+etudiant:
+    path:     /etudiant
+    defaults: { _controller: "AdmiScoBundle:Etudiant:index" }
+
+etudiant2:
+    path:     /etudiant2
+    defaults: { _controller: "AdmiScoBundle:Etudiant:index2" }
+etudiant3:
+    path:     /etudiant3
+    defaults: { _controller: "AdmiScoBundle:Etudiant:index3" }
+etudiant_show:
+    path:     /{id}/show
+    defaults: { _controller: "AdmiScoBundle:Etudiant:show" }
+
+etudiant_new:
+    path:     /new
+    defaults: { _controller: "AdmiScoBundle:Etudiant:new" }
+
+etudiant_create:
+    path:     /create
+    defaults: { _controller: "AdmiScoBundle:Etudiant:create" }
+    methods:  POST
+
+etudiant_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AdmiScoBundle:Etudiant:edit" }
+
+etudiant_update:
+    path:     /{id}/update
+    defaults: { _controller: "AdmiScoBundle:Etudiant:update" }
+    methods:  [POST, PUT]
+
+etudiant_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AdmiScoBundle:Etudiant:delete" }
+    methods:  [POST, DELETE]
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+admi_sco_homepage:
+    path:     /
+    defaults: { _controller: AdmiScoBundle:Default:index }
+admi_sco_groupe:
+    resource: "@AdmiScoBundle/Resources/config/routing/groupe.yml"
+    prefix:   /groupe
+
+admi_sco_niveau:
+    resource: "@AdmiScoBundle/Resources/config/routing/niveau.yml"
+    prefix:   /niveau
+admi_sco_resultat:
+    resource: "@AdmiScoBundle/Resources/config/routing/resultat.yml"
+    prefix:   /resultat
+admi_sco_filiere:
+    resource: "@AdmiScoBundle/Resources/config/routing/filiere.yml"
+    prefix:   /filiere
+
+admi_sco_diplome:
+    resource: "@AdmiScoBundle/Resources/config/routing/diplome.yml"
+    prefix:   /diplome
+
+admi_sco_etudiant:
+    resource: "@AdmiScoBundle/Resources/config/routing/etudiant.yml"
+    prefix:   /etudiant
+
+admi_sco_homepage:
+    path:     /
+    defaults: { _controller: AdmiScoBundle:Default:index }
+welcome:
+    path:     /welcome
+    defaults: { _controller: AdmiScoBundle:Default:welcome }
+admi_sco_enseignant:
+    resource: "@AdmiScoBundle/Resources/config/routing/enseignant.yml"
+    prefix:   /enseignant
+admi_sco_annee:
+    resource: "@AdmiScoBundle/Resources/config/routing/annee.yml"
+    prefix:   /annee
+admi_sco_semestre:
+    resource: "@AdmiScoBundle/Resources/config/routing/semestre.yml"
+    prefix:   /semestre
+
+admi_sco_salle:
+    resource: "@AdmiScoBundle/Resources/config/routing/salle.yml"
+    prefix:   /salle
+
+admi_sco_emploi:
+    resource: "@AdmiScoBundle/Resources/config/routing/emploi.yml"
+    prefix:   /emploi
+
+admi_sco_matiere:
+    resource: "@AdmiScoBundle/Resources/config/routing/matiere.yml"
+    prefix:   /matiere
+
+admi_sco_etablissement:
+    resource: "@AdmiScoBundle/Resources/config/routing/etablissement.yml"
+    prefix:   /etablissement
+
+admi_sco_note:
+    resource: "@AdmiScoBundle/Resources/config/routing/note.yml"
+    prefix:   /note
+
+admi_sco_contact:
+    resource: "@AdmiScoBundle/Resources/config/routing/contact.yml"
+    prefix:   /contact
+
+response:
+    path:   /response
+    defaults: { _controller: AdmiScoBundle:Default:Contact }
+
+
+admi_sco_actualite:
+    resource: "@AdmiScoBundle/Resources/config/routing/actualite.yml"
+    prefix:   /actualite
+admi_sco_admin:
+    resource: "@AdmiScoBundle/Resources/config/routing/admin.yml"
+    prefix:   /admin
